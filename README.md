@@ -14,16 +14,18 @@
 
 ## 현재 결과
 
-H1 문맥 구분 420문장, validation F2로 선택한 Arm B threshold 0.51 기준:
+현재 실제 독립 평가는 H1·H3·H5까지 완료했다.
 
-| 방식 | Recall | 비의료 flag | 균형점수 |
+| 하네스 | 현행 GLiNER | Arm A · Qwen3-32B | Arm B · ELECTRA-small |
 |---|---:|---:|---:|
-| Arm A · Qwen3-32B | 0.751 | 0.080 | 0.836 |
-| Arm B · ELECTRA-small | 0.864 | 0.466 | 0.699 |
+| H1 문맥 균형점수 ↑ | 0.802 | **0.836** | 0.699 |
+| H3 MedMentions F1 ↑ | **0.622** | 0.601 | 0.484 |
+| H3 MedMentions Recall ↑ | 0.797 | 0.686 | **0.799** |
+| H5 회귀(필수 58/비가림 24) | 통과 | 비가림 2건 위반 | 비가림 1건 위반 |
 
-H1은 내부 문맥 probe이며 human-gold가 아니다. H3/H4/H5의 독립 평가 결과는 아직 생성 중이다.
+H3은 공개 MedMentions 600문서의 핵심 14 UMLS TUI 문자 span을 쓰며, 직접적인 민감정보 human-gold는 아니다. 모든 L2는 120-word 청크 1,659개를 동일하게 본 뒤 원문 좌표로 합쳐 채점했다. Arm A의 생성 출력 중 91/1,659 청크(5.5%)는 원문 exact-alignment 검증을 통과하지 못해 L2 미탐지로 처리했다.
 
-`results/medical_evaluation.json`은 Qwen teacher hold-out에 대한 Arm B 모방 성능이며, 사람 정답 정확도가 아니다.
+현재로서는 Arm A/B가 현행 GLiNER를 대체한다는 결론은 성립하지 않는다. 결과 JSON은 `results/h3_medmentions_arm_ab_chunked.json`, `results/h5_arm_ab.json`에 있다. `results/medical_evaluation.json`은 Qwen teacher hold-out에 대한 Arm B 모방 성능이며, 사람 정답 정확도가 아니다.
 
 ## 구성
 

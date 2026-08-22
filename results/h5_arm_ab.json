@@ -28,6 +28,36 @@
           "target": "water"
         }
       ]
+    },
+    "L1 union current GLiNER": {
+      "name": "L1 union current GLiNER",
+      "must_mask_total": 58,
+      "must_mask_missed": 0,
+      "must_not_mask_total": 24,
+      "must_not_mask_violations": 0,
+      "pass": true,
+      "missed": [],
+      "overmasked": []
+    },
+    "L1 union Arm A Qwen3-32B": {
+      "name": "L1 union Arm A Qwen3-32B",
+      "must_mask_total": 58,
+      "must_mask_missed": 0,
+      "must_not_mask_total": 24,
+      "must_not_mask_violations": 2,
+      "pass": false,
+      "missed": [],
+      "overmasked": [
+        {
+          "case": 6,
+          "target": "daily"
+        },
+        {
+          "case": 29,
+          "target": "3 days"
+        }
+      ],
+      "llm_parse_errors": 0
     }
   }
 }

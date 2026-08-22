@@ -1,0 +1,54 @@
+{
+  "harness": "H3 MedMentions 600 external gold",
+  "gold": "character-level core 14 UMLS TUI; not direct sensitivity gold",
+  "n_documents": 600,
+  "n_chunks": 1659,
+  "chunk_words": 120,
+  "l1_version": "2026-08-21.2",
+  "l1_dictionary_fingerprint": "c8e5dec2814bb979129d69a7850db966887edae7969b77ca47f91939704f00eb",
+  "student_threshold": 0.51,
+  "gliner_threshold": 0.5,
+  "arms": {
+    "L1 union current GLiNER": {
+      "P": 0.51,
+      "R": 0.7973,
+      "F1": 0.6221,
+      "tp_chars": 78282,
+      "fp_chars": 75212,
+      "fn_chars": 19896,
+      "fp_other_gold_pct": 86.1,
+      "fp_no_gold_pct": 13.9
+    },
+    "L1 union Arm A Qwen3-32B": {
+      "P": 0.5339,
+      "R": 0.6863,
+      "F1": 0.6006,
+      "tp_chars": 67375,
+      "fp_chars": 58820,
+      "fn_chars": 30803,
+      "fp_other_gold_pct": 84.8,
+      "fp_no_gold_pct": 15.2,
+      "llm_parse_errors": 91
+    },
+    "L1 only": {
+      "P": 0.5879,
+      "R": 0.5829,
+      "F1": 0.5854,
+      "tp_chars": 57227,
+      "fp_chars": 40119,
+      "fn_chars": 40951,
+      "fp_other_gold_pct": 83.2,
+      "fp_no_gold_pct": 16.8
+    },
+    "L1 union Arm B ELECTRA-small": {
+      "P": 0.3475,
+      "R": 0.799,
+      "F1": 0.4843,
+      "tp_chars": 78446,
+      "fp_chars": 147318,
+      "fn_chars": 19732,
+      "fp_other_gold_pct": 88.6,
+      "fp_no_gold_pct": 11.4
+    }
+  }
+}
