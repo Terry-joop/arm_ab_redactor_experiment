@@ -1,0 +1,44 @@
+{
+  "harness": "H4 shared L1 token-rendering regression on Arm-B-held-out rows",
+  "scope": "L1 only versus L1 union L2 has the same L1 safety result; this is not an L2 quality metric.",
+  "l1_version": "2026-08-21.2",
+  "l1_dictionary_fingerprint": "c8e5dec2814bb979129d69a7850db966887edae7969b77ca47f91939704f00eb",
+  "datasets": {
+    "adr": {
+      "rows": 1639,
+      "tokenization_mismatch_rows": 0,
+      "residual_l1_patterns": 0,
+      "residual_by_category": {}
+    },
+    "drug": {
+      "rows": 3666,
+      "tokenization_mismatch_rows": 0,
+      "residual_l1_patterns": 0,
+      "residual_by_category": {}
+    },
+    "mednli": {
+      "rows": 1056,
+      "tokenization_mismatch_rows": 0,
+      "residual_l1_patterns": 0,
+      "residual_by_category": {}
+    },
+    "mentalhealth": {
+      "rows": 3114,
+      "tokenization_mismatch_rows": 0,
+      "residual_l1_patterns": 0,
+      "residual_by_category": {}
+    },
+    "redditmh": {
+      "rows": 4389,
+      "tokenization_mismatch_rows": 0,
+      "residual_l1_patterns": 0,
+      "residual_by_category": {}
+    },
+    "symptom2dx": {
+      "rows": 84,
+      "tokenization_mismatch_rows": 0,
+      "residual_l1_patterns": 0,
+      "residual_by_category": {}
+    }
+  }
+}
