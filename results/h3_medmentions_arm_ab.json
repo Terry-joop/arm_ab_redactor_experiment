@@ -1,0 +1,31 @@
+{
+  "harness": "H3 MedMentions 600 external gold",
+  "gold": "character-level core 14 UMLS TUI; not a direct sensitivity gold label",
+  "n_documents": 600,
+  "l1_version": "2026-08-21.2",
+  "l1_dictionary_fingerprint": "c8e5dec2814bb979129d69a7850db966887edae7969b77ca47f91939704f00eb",
+  "student_threshold": 0.51,
+  "gliner_threshold": 0.5,
+  "arms": {
+    "L1 only": {
+      "P": 0.5879,
+      "R": 0.5829,
+      "F1": 0.5854,
+      "tp_chars": 57227,
+      "fp_chars": 40119,
+      "fn_chars": 40951,
+      "fp_other_gold_pct": 83.2,
+      "fp_no_gold_pct": 16.8
+    },
+    "L1 union Arm B ELECTRA-small": {
+      "P": 0.442,
+      "R": 0.6946,
+      "F1": 0.5402,
+      "tp_chars": 68195,
+      "fp_chars": 86087,
+      "fn_chars": 29983,
+      "fp_other_gold_pct": 88.7,
+      "fp_no_gold_pct": 11.3
+    }
+  }
+}
