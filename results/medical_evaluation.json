@@ -1,0 +1,57 @@
+{
+  "f2_optimized": {
+    "threshold_selected_by": "validation_f2",
+    "validation": {
+      "threshold": 0.5099999999999999,
+      "accuracy_secondary": 0.8406277572198007,
+      "precision": 0.4936241421755955,
+      "recall": 0.8638222685260142,
+      "f1": 0.6282436241043796,
+      "f2": 0.7511550864202972,
+      "gold_mask_rate": 0.15589348187752128,
+      "predicted_mask_rate": 0.2728072832303971,
+      "residual_sensitive_rate": 0.13617773147398582,
+      "evaluated_tokens": 911244
+    },
+    "test": {
+      "threshold": 0.5099999999999999,
+      "accuracy_secondary": 0.8375981158268796,
+      "precision": 0.49046810079998115,
+      "recall": 0.8684696826543656,
+      "f1": 0.6268965084937003,
+      "f2": 0.7524826733537429,
+      "gold_mask_rate": 0.1570988274121869,
+      "predicted_mask_rate": 0.2781741943370033,
+      "residual_sensitive_rate": 0.13153031734563436,
+      "evaluated_tokens": 916264
+    }
+  },
+  "budget_matched": {
+    "threshold_selected_by": "validation_mask_rate",
+    "validation": {
+      "threshold": 0.7999999999999999,
+      "accuracy_secondary": 0.8994023554613254,
+      "precision": 0.6758768010722663,
+      "recall": 0.6815433241586124,
+      "f1": 0.6786982352219555,
+      "f2": 0.6804024310025918,
+      "gold_mask_rate": 0.15589348187752128,
+      "predicted_mask_rate": 0.1572004863680858,
+      "residual_sensitive_rate": 0.3184566758413876,
+      "evaluated_tokens": 911244
+    },
+    "test": {
+      "threshold": 0.7999999999999999,
+      "accuracy_secondary": 0.8986711253525185,
+      "precision": 0.6742481074814158,
+      "recall": 0.6868296004001556,
+      "f1": 0.6804807037105867,
+      "f2": 0.6842758781073247,
+      "gold_mask_rate": 0.1570988274121869,
+      "predicted_mask_rate": 0.1600302969449853,
+      "residual_sensitive_rate": 0.3131703995998444,
+      "evaluated_tokens": 916264
+    }
+  },
+  "warning": "This measures pseudo-teacher imitation, not human-gold privacy correctness."
+}

@@ -1,0 +1,37 @@
+{
+  "train": "data/arm_b_qwen32b_lawmask8_seed42/train.jsonl",
+  "validation": "data/arm_b_qwen32b_lawmask8_seed42/validation.jsonl",
+  "output_dir": "artifacts/arm_b_qwen32b_lawmask8_electra_seed42",
+  "model_name": "google/electra-small-discriminator",
+  "epochs": 3,
+  "batch_size": 128,
+  "num_workers": 0,
+  "batched_tokenization": false,
+  "pretokenize": true,
+  "tokenization_batch_size": 2048,
+  "learning_rate": 0.001,
+  "encoder_learning_rate": null,
+  "head_learning_rate": null,
+  "max_grad_norm": 1.0,
+  "hidden_size": 128,
+  "max_length": 128,
+  "seed": 42,
+  "unfreeze_encoder": true,
+  "offline": true,
+  "device": "cuda",
+  "freeze_encoder": false,
+  "effective_encoder_learning_rate": 2e-05,
+  "effective_head_learning_rate": 0.001,
+  "class_weights": [
+    1.0,
+    5.60111665725708
+  ],
+  "metrics": {
+    "accuracy": 0.8378238978802603,
+    "precision": 0.48864911591978843,
+    "recall": 0.8674616527168671,
+    "f1": 0.6251471185064935,
+    "f2": 0.7510199156276549
+  },
+  "best_epoch": 3
+}

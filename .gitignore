@@ -1,0 +1,10 @@
+# Do not publish health text, teacher labels, model weights, checkpoints, or run logs.
+data/
+artifacts/
+logs/
+models/
+__pycache__/
+*.pyc
+*.pt
+*.safetensors
+*.jsonl

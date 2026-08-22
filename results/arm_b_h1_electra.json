@@ -1,0 +1,9 @@
+{
+  "student": "ELECTRA-small Arm B",
+  "threshold": 0.51,
+  "n": 420,
+  "target_not_tokenized": 6,
+  "recall": 0.864,
+  "false": 0.466,
+  "bal": 0.699
+}
