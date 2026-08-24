@@ -1,0 +1,51 @@
+{
+  "harness": "H2 TAB PII structured Arm-A evaluation",
+  "scope": "TAB ECHR is hold-out evaluation only; it is not Teacher or Student training data.",
+  "n_documents": 1014,
+  "n_chunks": 11849,
+  "chunk_words": 120,
+  "common_l1": "existing deterministic regex branch of _pii_rules.pii_spans(strict=False)",
+  "qwen_model": "Qwen/Qwen3-32B",
+  "qwen_output": "validated zero-based word-index JSON",
+  "arms": {
+    "L1 regex only": {
+      "P": 0.9497,
+      "R": 0.0006,
+      "F1": 0.0013,
+      "tp_chars": 547,
+      "fp_chars": 29,
+      "fn_chars": 853132,
+      "fp_entity_pct": 48.3,
+      "fp_true_pct": 51.7,
+      "gold_chars": 853679
+    },
+    "L1 regex union current web_md": {
+      "P": 0.5471,
+      "R": 0.7804,
+      "F1": 0.6432,
+      "tp_chars": 666176,
+      "fp_chars": 551567,
+      "fn_chars": 187503,
+      "fp_entity_pct": 61.3,
+      "fp_true_pct": 38.7,
+      "gold_chars": 853679
+    },
+    "L1 regex union Arm A Qwen3-32B structured": {
+      "P": 0.6188,
+      "R": 0.5225,
+      "F1": 0.5666,
+      "tp_chars": 446077,
+      "fp_chars": 274745,
+      "fn_chars": 407602,
+      "fp_entity_pct": 41.0,
+      "fp_true_pct": 59.0,
+      "gold_chars": 853679,
+      "json_validation_errors": 233,
+      "json_validation_error_breakdown": {
+        "JSON decode 실패": 146,
+        "indices 중복": 82,
+        "indices 범위 또는 타입 오류": 5
+      }
+    }
+  }
+}
